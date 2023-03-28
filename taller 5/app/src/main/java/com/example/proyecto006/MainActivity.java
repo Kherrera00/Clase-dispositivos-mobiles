@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         Toast notificacion= Toast.makeText(this,cadena,Toast.LENGTH_LONG);
         notificacion.show();
     }
-
     public void controlar(View v) {
         String valorIngresado=et1.getText().toString();
         int valor=Integer.parseInt(valorIngresado);
