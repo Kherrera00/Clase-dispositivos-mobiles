@@ -3,6 +3,7 @@ package com.example.app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.app.Interface.CrudEmpleadoInterface;
 import com.example.app.Model.Empleado;
@@ -30,28 +31,32 @@ public class MainActivity extends AppCompatActivity {
     private void getAll(){
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://localhots:8080")
+                //.baseUrl("http://localhots:8080/")
+                .baseUrl("http://192.168.1.10:8080/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         cruempleado = retrofit.create(CrudEmpleadoInterface.class);
         Call<List<Empleado>> call = cruempleado.getAll();
 
-        call.enqueue(new Callback<list<Empleado>>(){
+        call.enqueue(new Callback<List<Empleado>>(){
 
         @Override
             public void onResponse(Call<List<Empleado>> call, Response<List<Empleado>> response) {
                 if(!response.isSuccessful()) {
-                    System.out.println(response.message());
+                    //System.out.println(response.message());
+                    Log.e("Response err:, " , response.message());
                     return;
                 }
                 listEmpleado = response.body();
-                listEmpleado.forEach(p-> System.out.println(p.toString()));
+                //listEmpleado.forEach(p-> System.out.println(p.toString()));
+                listEmpleado.forEach(p-> Log.i("Empleados: ", p.toString()));
+
             }
 
             @Override
             public void onFailure(Call<List<Empleado>> call, Throwable t){
-
-                System.out.println(t.getMessage());
+                Log.e("Throw error:" , t.getMessage());
+                //System.out.println(t.getMessage());
             }
         });
 
