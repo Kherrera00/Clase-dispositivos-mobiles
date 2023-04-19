@@ -56,7 +56,7 @@ public class Empleado {
 
     @Override
     public String toString(){
-        return "Empleado{" +
+        return "Empleado{"  +
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", password='" + password + '\'' +

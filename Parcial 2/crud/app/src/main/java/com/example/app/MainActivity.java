@@ -7,6 +7,11 @@ import android.util.Log;
 
 import com.example.app.Interface.CrudEmpleadoInterface;
 import com.example.app.Model.Empleado;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
@@ -30,10 +35,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void getAll(){
 
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
         Retrofit retrofit = new Retrofit.Builder()
-                //.baseUrl("http://localhots:8080/")
-                .baseUrl("http://192.168.1.10:8080/")
-                .addConverterFactory(GsonConverterFactory.create())
+                //.baseUrl("http://localhost:8080/")
+                .baseUrl("http://192.168.1.8:8080/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         cruempleado = retrofit.create(CrudEmpleadoInterface.class);
         Call<List<Empleado>> call = cruempleado.getAll();
