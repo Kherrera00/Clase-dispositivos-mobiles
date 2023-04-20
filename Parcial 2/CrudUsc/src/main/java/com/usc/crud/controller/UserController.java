@@ -39,7 +39,7 @@ public class UserController {
 
 
     // delete employee rest api
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/nombre/{id}")
     public ResponseEntity<?> deleteEmployee(@PathVariable Long id){
        String msj = service.eliminarUser(id);
         return ResponseEntity.ok(msj);

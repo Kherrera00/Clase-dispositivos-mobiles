@@ -41,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
 
         Retrofit retrofit = new Retrofit.Builder()
                 //.baseUrl("http://localhost:8080/")
-                .baseUrl("http://192.168.1.8:8080/")
-                .addConverterFactory(GsonConverterFactory.create(gson))
+                .baseUrl("http://10.10.5.235:8081")
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
         cruempleado = retrofit.create(CrudEmpleadoInterface.class);
         Call<List<Empleado>> call = cruempleado.getAll();
 
         call.enqueue(new Callback<List<Empleado>>(){
 
-        @Override
+            @Override
             public void onResponse(Call<List<Empleado>> call, Response<List<Empleado>> response) {
                 if(!response.isSuccessful()) {
                     //System.out.println(response.message());
