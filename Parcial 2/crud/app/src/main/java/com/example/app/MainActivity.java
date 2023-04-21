@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         Retrofit retrofit = new Retrofit.Builder()
                 //.baseUrl("http://localhost:8080/")
-                .baseUrl("http://10.10.5.235:8081")
+                .baseUrl("http://192.168.1.8:8081")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         cruempleado = retrofit.create(CrudEmpleadoInterface.class);
@@ -70,4 +70,41 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
+    private void eliminar(int idEmpleado) {
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.1.8:8081")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        cruempleado = retrofit.create(CrudEmpleadoInterface.class);
+        Call<Void> call = cruempleado.eliminar(idEmpleado);
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (!response.isSuccessful()) {
+                    Log.e("Response err:, ", response.message());
+                    return;
+                }
+
+                Log.i("Respuesta", "Se elimino el empleado");
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Log.e("Throw error:", t.getMessage());
+
+            }
+        });
+
+
+    }
+
+
 }
