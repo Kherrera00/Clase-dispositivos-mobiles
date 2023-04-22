@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 
 import com.example.app.Interface.CrudEmpleadoInterface;
 import com.example.app.Model.Empleado;
@@ -31,7 +32,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getAll();
+
+        eliminar(4);
+
+
+        Empleado nuevoEmpleado = new Empleado();
+        nuevoEmpleado.setNombre("Nuevo nombre");
+        nuevoEmpleado.setPassword("Nuevo password");
+        nuevoEmpleado.setEmail("Nuevo email");
+        crear(nuevoEmpleado);
+
+
+        actualizarR(4, nuevoEmpleado);
+
+
     }
+
+
 
     private void getAll(){
 
@@ -72,7 +89,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void eliminar(int idEmpleado) {
+
+    private void eliminar(int idP) {
 
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -83,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         cruempleado = retrofit.create(CrudEmpleadoInterface.class);
-        Call<Void> call = cruempleado.eliminar(idEmpleado);
+        Call<Void> call = cruempleado.eliminar(idP);
 
         call.enqueue(new Callback<Void>() {
             @Override
@@ -106,5 +124,73 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    private void actualizarR(int idP, Empleado empleado){
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.1.8:8081")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        cruempleado = retrofit.create(CrudEmpleadoInterface.class);
+        Call<Empleado> call = cruempleado.actualizarR(idP, empleado);
+        call.enqueue(new Callback<Empleado>(){
+
+            @Override
+            public void onResponse(Call<Empleado> call, Response<Empleado> response) {
+                if(!response.isSuccessful()) {
+                    Log.e("Response err:, ", response.message());
+                    return;
+                }
+                Empleado Actualizado = response.body();
+                Log.i("Se realizo la actualizacion con exito ", Actualizado.toString());
+
+            }
+
+            @Override
+            public void onFailure(Call<Empleado> call, Throwable t){
+                Log.e("Throw error:" , t.getMessage());
+            }
+        });
+
+    }
+
+    private void crear(Empleado empleado){
+
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.1.8:8081")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        cruempleado = retrofit.create(CrudEmpleadoInterface.class);
+        Call<Empleado> call = cruempleado.crear(empleado);
+        call.enqueue(new Callback<Empleado>(){
+
+            @Override
+            public void onResponse(Call<Empleado> call, Response<Empleado> response) {
+                if(!response.isSuccessful()) {
+                    Log.e("Response err:, " , response.message());
+                    return;
+                }
+                Empleado empleadoR = response.body();
+                Log.i("se creo con exito ", empleadoR.toString());
+
+            }
+
+            @Override
+            public void onFailure(Call<Empleado> call, Throwable t){
+                Log.e("Throw error:" , t.getMessage());
+            }
+        });
+
+    }
 
 }

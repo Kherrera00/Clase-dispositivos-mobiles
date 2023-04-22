@@ -29,8 +29,7 @@ public class Empleado {
         return nombre;
     }
 
-    public void setUser(String nombre) {
-        this.nombre = nombre;
+    public void setUser(String nombre) {this.nombre = nombre;
     }
 
     public String getPassword() {

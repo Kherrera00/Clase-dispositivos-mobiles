@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 public class UserController {
 
@@ -30,12 +32,30 @@ public class UserController {
     @GetMapping("/consultarAll")
     public ResponseEntity<?> consultarByUser(){
 
+        System.out.println(ResponseEntity.ok(service.buscarTdoso()));
         return ResponseEntity.ok(service.buscarTdoso()
         );
     }
 
     // update employee rest api
-    
+
+    @PutMapping("/actualizar/{id}")
+    public ResponseEntity<?> actualizarR(@PathVariable Long id, @RequestBody Empleado empleado) {
+        Optional<Empleado> nuevoEmpleado2 = service.finByUser(empleado);
+        if (nuevoEmpleado2.isPresent()) {
+            Empleado Actualizado = nuevoEmpleado2.get();
+            Actualizado.setUser(empleado.getNombre());
+            Actualizado.setPassword(empleado.getPassword());
+            Actualizado.setEmail(empleado.getEmail());
+            Actualizado = service.guardarUser(Actualizado);
+            return ResponseEntity.ok(Actualizado);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
+
 
     // delete employee rest api
     @DeleteMapping("/nombre/{id}")
