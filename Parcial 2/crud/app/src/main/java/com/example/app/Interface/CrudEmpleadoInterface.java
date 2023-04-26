@@ -22,7 +22,7 @@ public interface CrudEmpleadoInterface {
     Call<Void> eliminar(@Path("id") int idP);
 
     @PUT("/actualizar/{id}")
-    Call<Empleado> actualizarR(@Path("id")int idP, @Body Empleado empleado);
+    Call<Empleado> actualizar(@Path("id")int idP, @Body Empleado empleado);
 
     @POST("/guardar")
     Call<Empleado> crear(@Body Empleado empleado);

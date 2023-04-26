@@ -37,24 +37,23 @@ public class UserController {
         );
     }
 
-    // update employee rest api
 
+
+    // update employee rest api
     @PutMapping("/actualizar/{id}")
-    public ResponseEntity<?> actualizarR(@PathVariable Long id, @RequestBody Empleado empleado) {
-        Optional<Empleado> nuevoEmpleado2 = service.finByUser(empleado);
-        if (nuevoEmpleado2.isPresent()) {
-            Empleado Actualizado = nuevoEmpleado2.get();
-            Actualizado.setUser(empleado.getNombre());
-            Actualizado.setPassword(empleado.getPassword());
-            Actualizado.setEmail(empleado.getEmail());
-            Actualizado = service.guardarUser(Actualizado);
-            return ResponseEntity.ok(Actualizado);
+    public ResponseEntity<?> actualizar(@PathVariable Empleado id, @RequestBody Empleado empleadoActu) {
+        Optional<Empleado> empleadoExistente = service.finByUser(id);
+        if (empleadoExistente.isPresent()) {
+            Empleado empleado = empleadoExistente.get();
+            empleado.setUser(empleadoActu.getNombre());
+            empleado.setPassword(empleadoActu.getPassword());
+            empleado.setEmail(empleadoActu.getEmail());
+            Empleado empleadoActualizadoDB = service.guardarUser(empleado);
+            return ResponseEntity.ok().body(empleadoActualizadoDB);
         } else {
             return ResponseEntity.notFound().build();
         }
     }
-
-
 
 
     // delete employee rest api

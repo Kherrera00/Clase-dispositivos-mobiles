@@ -7,6 +7,7 @@ import java.util.Scanner;
 import retrofit2.Call;
 import retrofit2.Callback;
 
+
 public class Empleado {
 
     private Long id;
