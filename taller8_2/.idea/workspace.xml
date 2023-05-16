@@ -10,50 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9347c32b-ddcf-4e8e-8fd6-cbc3d92f7c4f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/androidTest/java/com/example/myfinanc/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/java/com/example/myfinanc/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/app/src/test/java/com/example/myfinanc/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Aplicacion_final/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/proyecto055/Actividad2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_actividad2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taller8_3/app/src/main/java/com/example/proyecto056/Actividad2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taller8_3/app/src/main/res/layout/activity_actividad2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../taller8_3/app/src/main/res/values/dimens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../taller 3/usc" beforeDir="false" afterPath="$PROJECT_DIR$/../taller 3/usc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +47,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true"
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/kherr/OneDrive/Escritorio/Proyectos Android/Clase-dispositivos-mobiles/Aplicacion_final"
   }
 }]]></component>
   <component name="RecentsManager">
