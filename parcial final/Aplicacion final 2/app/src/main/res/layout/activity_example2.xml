@@ -34,15 +34,16 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_width="288dp"
+        android:layout_height="191dp"
+        android:text="Un activo es un recurso con valor que alguien posee con la intención de que genere un beneficio futuro (sea económico o no). En contabilidad, representa todos los bienes y derechos de una empresa, adquiridos en el pasado y con los que esperan obtener beneficios futuros."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
+        app:layout_constraintVertical_bias="0.857" />
 
     <ImageView
         android:id="@+id/imageView8"

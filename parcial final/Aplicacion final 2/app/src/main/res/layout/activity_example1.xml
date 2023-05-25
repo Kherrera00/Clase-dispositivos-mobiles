@@ -33,15 +33,16 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_width="352dp"
+        android:layout_height="236dp"
+        android:text="Si deseas ahorrar dinero, puedes realizar estas actividades diariamente para cambiar tus malos habitos: Crea un presupuesto y sigue un plan de gastos mensuales, Reduce los gastos innecesarios y elimina suscripciones que no utilizas, Evita adquirir deudas innecesarias y prioriza el pago de las existentes, Compra de manera inteligente, comparando precios y considerando opciones usadas."
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.679" />
+        app:layout_constraintVertical_bias="0.81" />
 
     <ImageView
         android:id="@+id/imageView8"

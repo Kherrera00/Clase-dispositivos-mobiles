@@ -35,7 +35,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Login extends AppCompatActivity {
 
-    String ruta = "http://192.168.1.8:8081/";
+    String ruta = "http://10.10.20.106:8081/";
     List<Empleado> listEmpleado;
     CrudEmpleadoInterface cruempleado;
     private String nombre;

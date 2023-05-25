@@ -34,15 +34,16 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_width="291dp"
+        android:layout_height="193dp"
+        android:text="Son deudas que tenemos en el presente pero que hemos contraído en el pasado. Un ejemplo de obligación es el préstamo con una entidad financiera. Al adquirir ese préstamo, estamos obligados a pagar el principal y los intereses al proveedor (documentado en una factura o en una letra de cambio)."
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.608"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.721" />
+        app:layout_constraintVertical_bias="0.828" />
 
     <ImageView
         android:id="@+id/imageView8"

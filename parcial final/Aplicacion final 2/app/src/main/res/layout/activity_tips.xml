@@ -39,28 +39,17 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="266dp"
-        android:layout_height="283dp"
-        android:text="Lorem Ipsum es simplemente el texto de relleno
-        de las imprentas y archivos de texto. Lorem Ipsum
-        ha sido el texto de relleno estándar de las industrias
-        desde el año 1500, cuando un impresor (N. del T. persona
-        que se dedica a la imprenta) desconocido usó una galería
-        de textos y los mezcló de tal manera que logró hacer un
-        libro de textos especimen. No sólo sobrevivió 500 años,
-        sino que tambien ingresó como texto de relleno en documentos
-        electrónicos, quedando esencialmente igual al original. Fue
-        popularizado en los 60s con la creación de las hojas
-        Letraset, las cuales contenian pasajes de Lorem Ipsum,
-        y más recientemente con software de autoedición, como
-        por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum."
+        android:layout_width="290dp"
+        android:layout_height="420dp"
+        android:text="Paga primero a ti mismo. Esto significa que debes priorizar tus ahorros y tu futuro financiero antes de cualquier otro gasto. En lugar de gastar todo tu dinero y luego ahorrar lo que sobra, destina una parte de tus ingresos a tus ahorros desde el principio.Establece un porcentaje o una cantidad fija de tus ingresos para ahorrar y trata ese ahorro como una obligación financiera. Puedes hacerlo automatizando tus ahorros mediante transferencias automáticas a una cuenta separada o a través de programas de jubilación o ahorro en el trabajo."
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        />
+        app:layout_constraintVertical_bias="0.639" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
